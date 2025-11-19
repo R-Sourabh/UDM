@@ -1,0 +1,69 @@
+<!-- ===================== ORDER CANCELLED ===================== -->
+
+<!-- 1. ORDER HEADER (status changed to ORDER_CANCELLED) -->
+<OrderHeader
+    orderId="10"
+    orderTypeId="SALES_ORDER"
+    statusId="ORDER_CANCELLED"
+    createdBy="system"
+    orderDate="2024-10-09 12:10:00"
+    entryDate="2024-10-09 12:10:00"
+    salesChannelEnumId="WEB_SALES_CHANNEL"
+    currencyUom="USD"
+/>
+
+<!-- 2. ORDER STATUS (ORDER LEVEL: CANCELLED) -->
+<OrderStatus
+    orderStatusId="10_CANCELLED"
+    orderId="10"
+    statusId="ORDER_CANCELLED"
+    statusUserLogin="system"
+/>
+
+<!-- 3. ORDER ITEM (status changed to ITEM_CANCELLED) -->
+<OrderItem
+    orderId="10"
+    orderItemSeqId="00101"
+    statusId="ITEM_CANCELLED"
+/>
+
+<!-- 4. ITEM STATUS (ITEM_CANCELLED) -->
+<OrderStatus
+    orderStatusId="10_00101_CANCELLED"
+    orderId="10"
+    orderItemSeqId="00101"
+    statusId="ITEM_CANCELLED"
+/>
+
+<!-- ===================== CONTACT MECHANISMS ===================== -->
+
+<OrderContactMech
+    orderId="10"
+    contactMechId="CM10_EMAIL"
+    contactMechPurposeTypeId="PRIMARY_EMAIL"
+/>
+
+<!-- Note: Only essential contact kept (as per reference) -->
+
+<!-- ===================== SHIP GROUP (kept but simplified) ===================== -->
+
+<OrderItemShipGroup
+    orderId="10"
+    shipGroupSeqId="1"
+    carrierPartyId="TEST"
+/>
+
+<!-- ===================== PAYMENT (COD-style or cancellation method) ===================== -->
+
+<PaymentMethod
+    paymentMethodId="PM10_CANCEL"
+    partyId="10051"
+    paymentMethodTypeId="EXT_COD"
+/>
+
+<OrderPaymentPreference
+    orderPaymentPreferenceId="OPP10_CANCEL"
+    orderId="10"
+    paymentMethodTypeId="EXT_COD"
+    paymentMethodId="PM10_CANCEL"
+/>

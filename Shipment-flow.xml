@@ -1,0 +1,92 @@
+<!-- ===================== ORDER SHIPMENTS ===================== -->
+<OrderShipment
+    orderItemSeqId="00101"
+    quantity="1"
+    orderId="10"
+    shipmentId="M106631"
+    shipmentItemSeqId="01"
+    shipGroupSeqId="1"
+/>
+
+<!-- ===================== CARRIER SHIPMENT METHODS ===================== -->
+<CarrierShipmentMethod
+    sequenceNumber="1"
+    roleTypeId="CARRIER"
+    partyId="10014"
+    shipmentMethodTypeId="2DAY_FDX_SHP"
+/>
+
+<!-- ===================== SHIPMENTS ===================== -->
+<Shipment
+    shipmentId="M106631"
+    shipmentTypeId="SALES_SHIPMENT"
+    statusId="SHIPMENT_PACKED"
+    partyIdFrom="COMPANY"
+    partyIdTo="10001"
+    originFacilityId="FAC10"
+    originContactMechId="20002"
+    destinationContactMechId="20002"
+    primaryOrderId="10"
+    primaryShipGroupSeqId="1"
+    estimatedShipCost="0"
+    createdByUserLogin="system"
+/>
+
+<!-- ===================== SHIPMENT STATUS ===================== -->
+<ShipmentStatus
+    shipmentStatusId="SHIP_M106631_PACKED"
+    shipmentId="M106631"
+    statusId="SHIPMENT_PACKED"
+    changeByUserLoginId="system"
+/>
+
+<!-- ===================== SHIPMENT ROUTE SEGMENTS ===================== -->
+<ShipmentRouteSegment
+    shipmentRouteSegmentId="00001"
+    shipmentId="M106631"
+    originFacilityId="FAC10"
+    originContactMechId="20002"
+    destContactMechId="20002"
+    carrierPartyId="10014"
+    shipmentMethodTypeId="2DAY_FDX_SHP"
+    carrierServiceStatusId="SHRSCS_ACCEPTED"
+    isTrackingRequired="Y"
+/>
+
+<!-- ===================== SHIPMENT PACKAGE ROUTE SEG ===================== -->
+<ShipmentPackageRouteSeg
+    shipmentPackageSeqId="00001"
+    shipmentRouteSegmentId="00001"
+    shipmentId="M106631"
+/>
+
+<!-- ===================== SHIPMENT ATTRIBUTES ===================== -->
+<ShipmentAttribute
+    shipmentId="M106631"
+    attrName="EXTERNAL_ORDER_ID"
+    attrValue="10"
+/>
+
+<!-- ===================== PICKLIST SHIPMENTS ===================== -->
+<PicklistShipment
+    picklistId="10301"
+    shipmentId="M106631"
+/>
+
+<!-- ===================== PICKLIST ITEMS ===================== -->
+<PicklistItem
+    orderId="10"
+    orderItemSeqId="00101"
+    inventoryItemId="16934"
+    shipGroupSeqId="1"
+    quantity="1"
+    picked="1"
+    itemStatusId="PICKITEM_PICKED"
+/>
+
+<!-- ===================== PICKLIST ROLES ===================== -->
+<PicklistRole
+    picklistId="10270"
+    roleTypeId="WAREHOUSE_PICKER"
+    partyId="10230"
+/>

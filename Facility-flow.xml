@@ -1,0 +1,40 @@
+<!-- ===================== FACILITIES ===================== -->
+<Facility 
+    facilityId="F100" 
+    facilityTypeId="RETAIL_STORE"
+    facilityName="Main Retail Store"
+/>
+
+<Facility 
+    facilityId="F101" 
+    facilityTypeId="WAREHOUSE"
+    facilityName="Central Warehouse"
+/>
+
+<!-- ===================== FACILITY IDENTIFICATION ===================== -->
+<FacilityIdentification 
+    facilityId="F100" 
+    facilityIdenTypeId="WMS"
+    idValue="STORE_MAIN" 
+/>
+
+<!-- ===================== FACILITY GROUP ===================== -->
+<FacilityGroup 
+    facilityGroupId="FG100" 
+    facilityGroupName="Retail Group"
+    facilityGroupTypeId="RETAIL"
+/>
+
+<!-- ===================== FACILITY GROUP MEMBER ===================== -->
+<FacilityGroupMember 
+    facilityGroupId="FG100" 
+    facilityId="F100"
+    sequenceNum="1" 
+/>
+
+<!-- ===================== FACILITY PARTY ===================== -->
+<FacilityParty 
+    facilityId="F101" 
+    partyId="10001"
+    roleTypeId="WAREHOUSE_MANAGER" 
+/>
