@@ -1,40 +1,18 @@
 <!-- ===================== FACILITIES ===================== -->
-<Facility 
-    facilityId="F100" 
-    facilityTypeId="RETAIL_STORE"
-    facilityName="Main Retail Store"
-/>
-
-<Facility 
-    facilityId="F101" 
-    facilityTypeId="WAREHOUSE"
-    facilityName="Central Warehouse"
-/>
+<Facility facilityId="F100" facilityTypeId="RETAIL_STORE" facilityName="Main Retail Store" />
+<Facility facilityId="F101" facilityTypeId="WAREHOUSE" facilityName="Central Warehouse" />
 
 <!-- ===================== FACILITY IDENTIFICATION ===================== -->
-<FacilityIdentification 
-    facilityId="F100" 
-    facilityIdenTypeId="WMS"
-    idValue="STORE_MAIN" 
-/>
+<FacilityIdentification facilityId="F100" facilityIdenTypeId="WMS" idValue="STORE_MAIN" />
 
 <!-- ===================== FACILITY GROUP ===================== -->
-<FacilityGroup 
-    facilityGroupId="FG100" 
-    facilityGroupName="Retail Group"
-    facilityGroupTypeId="RETAIL"
-/>
+<FacilityGroup facilityGroupId="FG100" facilityGroupName="Retail Group" facilityGroupTypeId="RETAIL" />
 
 <!-- ===================== FACILITY GROUP MEMBER ===================== -->
-<FacilityGroupMember 
-    facilityGroupId="FG100" 
-    facilityId="F100"
-    sequenceNum="1" 
-/>
+<FacilityGroupMember facilityGroupId="FG100" facilityId="F100" sequenceNum="1" />
 
 <!-- ===================== FACILITY PARTY ===================== -->
-<FacilityParty 
-    facilityId="F101" 
-    partyId="10001"
-    roleTypeId="WAREHOUSE_MANAGER" 
-/>
+<FacilityParty facilityId="F101" partyId="10001" roleTypeId="WAREHOUSE_MANAGER" />
+
+<!-- ===================== PRODUCT FACILITY ===================== -->
+<ProductFacility facilityId="F101" productId="10001" allowBrokering="N" inventoryItemId="O297535" computedLastInventoryCount="0"/>
