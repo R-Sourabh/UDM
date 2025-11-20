@@ -1,132 +1,37 @@
 <!-- ===================== ORDER COMPLETED ===================== -->
 
-<!-- 1. ORDER HEADER (status changed to ORDER_COMPLETED) -->
-<OrderHeader
-    orderId="10"
-    orderTypeId="SALES_ORDER"
-    statusId="ORDER_COMPLETED"
-    createdBy="system"
-    orderDate="2024-10-09 12:10:00"
-    entryDate="2024-10-09 12:10:00"
-    salesChannelEnumId="WEB_SALES_CHANNEL"
-    currencyUom="USD"
-/>
+<!-- 1. ORDER HEADER -->
+<OrderHeader orderId="10" orderTypeId="SALES_ORDER" statusId="ORDER_COMPLETED" createdBy="system" orderDate="2024-10-09 12:10:00" entryDate="2024-10-09 12:10:00" salesChannelEnumId="WEB_SALES_CHANNEL" currencyUom="USD"/>
 
-<!-- 2. ORDER STATUS (ORDER LEVEL: COMPLETED) -->
-<OrderStatus
-    orderStatusId="10_COMPLETED"
-    orderId="10"
-    statusId="ORDER_COMPLETED"
-    statusUserLogin="system"
-/>
+<!-- 2. ORDER STATUS (ORDER LEVEL) -->
+<OrderStatus orderStatusId="10_COMPLETED" orderId="10" statusId="ORDER_COMPLETED" statusUserLogin="system"/>
 
-<!-- 3. ORDER ITEM (updated from ITEM_APPROVED → ITEM_COMPLETED) -->
-<OrderItem
-    orderId="10"
-    orderItemSeqId="00101"
-    productId="M101173"
-    statusId="ITEM_COMPLETED"
-    quantity="1"
-/>
+<!-- 3. ORDER ITEM -->
+<OrderItem orderId="10" orderItemSeqId="00101" productId="M101173" statusId="ITEM_COMPLETED" quantity="1"/>
 
-<!-- 4. ITEM-LEVEL STATUS FOR ITEM_COMPLETED -->
-<OrderStatus
-    orderStatusId="10_00101_COMPLETED"
-    orderId="10"
-    orderItemSeqId="00101"
-    statusId="ITEM_COMPLETED"
-/>
+<!-- 4. ITEM LEVEL STATUS -->
+<OrderStatus orderStatusId="10_00101_COMPLETED" orderId="10" orderItemSeqId="00101" statusId="ITEM_COMPLETED"/>
 
 <!-- ===================== CONTACT MECHANISMS ===================== -->
-
-<OrderContactMech
-    orderId="10"
-    contactMechId="CM10_BILLING"
-    contactMechPurposeTypeId="BILLING_LOCATION"
-/>
-
-<OrderContactMech
-    orderId="10"
-    contactMechId="CM10_SHIPPING"
-    contactMechPurposeTypeId="SHIPPING_LOCATION"
-/>
-
-<OrderContactMech
-    orderId="10"
-    contactMechId="CM10_PHONE_BILLING"
-    contactMechPurposeTypeId="PHONE_BILLING"
-/>
-
-<OrderContactMech
-    orderId="10"
-    contactMechId="CM10_PHONE_SHIPPING"
-    contactMechPurposeTypeId="PHONE_SHIPPING"
-/>
-
-<OrderContactMech
-    orderId="10"
-    contactMechId="CM10_EMAIL"
-    contactMechPurposeTypeId="PRIMARY_EMAIL"
-/>
+<OrderContactMech orderId="10" contactMechId="CM10_BILLING" contactMechPurposeTypeId="BILLING_LOCATION"/>
+<OrderContactMech orderId="10" contactMechId="CM10_SHIPPING" contactMechPurposeTypeId="SHIPPING_LOCATION"/>
+<OrderContactMech orderId="10" contactMechId="CM10_PHONE_BILLING" contactMechPurposeTypeId="PHONE_BILLING"/>
+<OrderContactMech orderId="10" contactMechId="CM10_PHONE_SHIPPING" contactMechPurposeTypeId="PHONE_SHIPPING"/>
+<OrderContactMech orderId="10" contactMechId="CM10_EMAIL" contactMechPurposeTypeId="PRIMARY_EMAIL"/>
 
 <!-- ===================== ORDER ROLES ===================== -->
-
-<OrderRole
-    orderId="10"
-    roleTypeId="PLACING_CUSTOMER"
-    partyId="10051"
-/>
-
-<OrderRole
-    orderId="10"
-    roleTypeId="BILL_TO_CUSTOMER"
-    partyId="10051"
-/>
-
-<OrderRole
-    orderId="10"
-    roleTypeId="SHIP_TO_CUSTOMER"
-    partyId="10051"
-/>
+<OrderRole orderId="10" roleTypeId="PLACING_CUSTOMER" partyId="10051"/>
+<OrderRole orderId="10" roleTypeId="BILL_TO_CUSTOMER" partyId="10051"/>
+<OrderRole orderId="10" roleTypeId="SHIP_TO_CUSTOMER" partyId="10051"/>
 
 <!-- ===================== SHIP GROUP ===================== -->
+<OrderItemShipGroup orderId="10" shipGroupSeqId="1" shipmentMethodTypeId="STANDARD" carrierPartyId="TEST"/>
 
-<OrderItemShipGroup
-    orderId="10"
-    shipGroupSeqId="1"
-    shipmentMethodTypeId="STANDARD"
-    carrierPartyId="TEST"
-/>
-
-<!-- ITEM SHIP GROUP ASSOC (same qty = 1) -->
-<OrderItemShipGroupAssoc
-    orderId="10"
-    orderItemSeqId="00101"
-    shipGroupSeqId="1"
-    quantity="1"
-/>
+<OrderItemShipGroupAssoc orderId="10" orderItemSeqId="00101" shipGroupSeqId="1" quantity="1"/>
 
 <!-- ===================== PAYMENT ===================== -->
+<PaymentMethod paymentMethodId="PM10" partyId="10051" paymentMethodTypeId="CREDIT_CARD"/>
 
-<PaymentMethod
-    paymentMethodId="PM10"
-    partyId="10051"
-    paymentMethodTypeId="CREDIT_CARD"
-/>
+<CreditCard paymentMethodId="PM10" cardType="CCT_VISA" cardNumber="4111111111111111" firstNameOnCard="Test" lastNameOnCard="Customer" expireDate="12/2030"/>
 
-<CreditCard
-    paymentMethodId="PM10"
-    cardType="CCT_VISA"
-    cardNumber="4111111111111111"
-    firstNameOnCard="Test"
-    lastNameOnCard="Customer"
-    expireDate="12/2030"
-/>
-
-<OrderPaymentPreference
-    orderPaymentPreferenceId="OPP10"
-    orderId="10"
-    paymentMethodTypeId="CREDIT_CARD"
-    paymentMethodId="PM10"
-    statusId="PAYMENT_AUTHORIZED"
-/>
+<OrderPaymentPreference orderPaymentPreferenceId="OPP10" orderId="10" paymentMethodTypeId="CREDIT_CARD" paymentMethodId="PM10" statusId="PAYMENT_AUTHORIZED"/>
