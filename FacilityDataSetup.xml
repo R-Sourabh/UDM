@@ -19,5 +19,9 @@
 <FacilityParty facilityId="F100" partyId="10001" roleTypeId="WAREHOUSE_MANAGER" />
 
 <!-- ===================== PRODUCT FACILITY ===================== -->
-<ProductFacility facilityId="F100" productId="P300" allowBrokering="N" inventoryItemId="IT100" computedLastInventoryCount="100"/>
-<ProductFacility facilityId="F100" productId="P301" allowBrokering="N" inventoryItemId="IT100" computedLastInventoryCount="80"/>
+<ProductFacility facilityId="F100" productId="P301" allowBrokering="N" inventoryItemId="IT100" computedLastInventoryCount="100"/>
+<ProductFacility facilityId="F100" productId="P302" allowBrokering="N" inventoryItemId="IT100" computedLastInventoryCount="80"/>\
+
+<!-- ===================== PRODUCT FACILITY LOCATION ===================== -->
+<ProductFacilityLocation facilityId="F100" locationSeqId="TLTLTLLL01" productId="P301"/>
+<ProductFacilityLocation facilityId="F100" locationSeqId="TLTLTLLL01" productId="P302"/>
