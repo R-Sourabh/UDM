@@ -1,14 +1,11 @@
 <!-- ===================== PARTY ===================== -->
 <Party partyId="10001" partyTypeId="PERSON" statusId="PARTY_ENABLED" createdByUserLogin="system"/>
-<Party partyId="10002" partyTypeId="PERSON" statusId="PARTY_ENABLED" createdByUserLogin="system"/>
 
 <!-- ===================== PERSON ===================== -->
 <Person partyId="10001" firstName="Ram" lastName="Tiwari"/>
-<Person partyId="10002" firstName="Lakhan" lastName="Sharma"/>
 
 <!-- ===================== PARTY ROLES ===================== -->
-<PartyRole partyId="10001" roleTypeId="CUSTOMER" />
-<PartyRole partyId="10002" roleTypeId="WAREHOUSE_PICKER" />
+<PartyRole partyId="10001" roleTypeId="APPLICATION_USER" />
 
 <!-- ===================== CONTACT MECH ===================== -->
 <ContactMech contactMechId="20001" contactMechTypeId="EMAIL_ADDRESS" infoString="ram.tiwari@example.com"/>
@@ -18,7 +15,7 @@
 <!-- ===================== PARTY CONTACT MECH ===================== -->
 <PartyContactMech partyId="10001" contactMechId="20001" fromDate="2024-10-09 12:10:00"/>
 <PartyContactMech partyId="10001" contactMechId="20002" fromDate="2024-10-09 12:10:00"/>
-<PartyContactMech partyId="10002" contactMechId="20003" fromDate="2024-10-09 12:10:00"/>
+<PartyContactMech partyId="10001" contactMechId="20003" fromDate="2024-10-09 12:10:00"/>
 
 <!-- ===================== POSTAL ADDRESS & TELECOM NUMBER ===================== -->
 <PostalAddress contactMechId="20002" address1="123 Main Street" city="Austin" stateProvinceGeoId="TX" postalCode="78750" countryGeoId="USA"/>
@@ -27,4 +24,4 @@
 <!-- ===================== PARTY CONTACT MECH PURPOSE ===================== -->
 <PartyContactMechPurpose partyId="10001" contactMechId="20001" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2024-10-09 12:10:00"/>
 <PartyContactMechPurpose partyId="10001" contactMechId="20002" contactMechPurposeTypeId="SHIPPING_LOCATION" fromDate="2024-10-09 12:10:00"/>
-<PartyContactMechPurpose partyId="10002" contactMechId="20003" contactMechPurposeTypeId="PHONE_SHIPPING" fromDate="2024-10-09 12:10:00"/>
+<PartyContactMechPurpose partyId="10001" contactMechId="20003" contactMechPurposeTypeId="PHONE_SHIPPING" fromDate="2024-10-09 12:10:00"/>
