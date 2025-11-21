@@ -1,0 +1,22 @@
+<!-- ===================== PRODUCT STORES ===================== -->
+<ProductStore productStoreId="PS001" storeName="Citadel prime" companyName="Citadel" payToPartyId="COMPANY" inventoryFacilityId="_NA_" defaultSalesChannelEnumId="WEB_SALES_CHANNEL" productIdentifierEnumId="SHOPIFY_PRODUCT_ID" />
+<ProductStore productStoreId="PS002"  storeName="Citadel Neo" companyName="Citadel" payToPartyId="COMPANY" inventoryFacilityId="_NA_" defaultSalesChannelEnumId="WEB_SALES_CHANNEL" productIdentifierEnumId="SHOPIFY_PRODUCT_ID"/>
+
+<!-- ===================== PROD CATALOG ===================== -->
+<ProdCatalog prodCatalogId="CATALOG_001" catalogName="Default Catalog"/>
+
+<!-- ===================== PRODUCT STORE CATALOG ===================== -->
+<ProductStoreCatalog productStoreId="PS001" prodCatalogId="CATALOG_001" fromDate="2024-10-09 12:10:00" />
+<ProductStoreCatalog productStoreId="PS002"  prodCatalogId="CATALOG_001" fromDate="2024-10-09 12:10:00" />
+
+<!-- ===================== PRODUCT CATEGORY ===================== -->
+<ProductCategory productCategoryId="CATEGORY_001" productCategoryTypeId="CATALOG_CATEGORY"/>
+
+<!-- ===================== PROD CATALOG CATEGORY (link CAT100 -> CATROOT) ===================== -->
+<ProdCatalogCategory prodCatalogId="CATALOG_001" productCategoryId="CATEGORY_001" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" sequenceNum="1" fromDate="2024-10-10 12:10:00"/>
+
+<!-- subcategory under CATROOT -->
+<ProductCategory productCategoryId="CATEGORY_002" productCategoryTypeId="CATALOG_CATEGORY"/>
+
+<!-- Add Subcategory to Root Category -->
+<ProductCategoryRollup parentProductCategoryId="CATEGORY_001" productCategoryId="CATEGORY_002" fromDate="2024-10-11 12:10:00"/>
