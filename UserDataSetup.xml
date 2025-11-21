@@ -1,10 +1,8 @@
 <!-- ===================== USER LOGIN ===================== -->
 <UserLogin userLoginId="ram.tiwari" currentPassword="Ram@123" enabled="Y" partyId="10001" />
-<UserLogin userLoginId="lakhan.sharma" currentPassword="lakahn.sharma@123" enabled="Y" partyId="10002" />
 
 <!-- ===================== SECURITY GROUPS ===================== -->
 <SecurityGroup groupId="ADMIN_VIEW" description="Admin View" />
-<SecurityGroup groupId="CSR" description="Customer Service Representative: This Group is responsible for taking care of customers queries/requirements" />
 
 <!-- ===================== SECURITY PERMISSIONS ===================== -->
 <SecurityPermission permissionId="COMMON_ADMIN" description="Common administrator access" />
@@ -12,8 +10,7 @@
 
 <!-- ===================== GROUP-PERMISSION RELATIONSHIPS ===================== -->
 <SecurityGroupPermission groupId="ADMIN_VIEW" permissionId="COMMON_ADMIN" />
-<SecurityGroupPermission groupId="CSR" permissionId="ACCOUNTING_COMM_VIEW" />
+<SecurityGroupPermission groupId="ADMIN_VIEW" permissionId="ACCOUNTING_COMM_VIEW" />
 
 <!-- ===================== USER-SECURITY GROUP ASSIGNMENTS ===================== -->
-<UserLoginSecurityGroup userLoginId="ram.tiwari" groupId="ADMIN_VIEW" />
-<UserLoginSecurityGroup userLoginId="lakhan.sharma" groupId="CSR" />
+<UserLoginSecurityGroup userLoginId="ram.tiwari" groupId="ADMIN_VIEW" fromDate="2024-01-01 00:00:00" />
