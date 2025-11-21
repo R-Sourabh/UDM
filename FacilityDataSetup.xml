@@ -2,6 +2,10 @@
 <Facility facilityId="F100" facilityTypeId="RETAIL_STORE" facilityName="Main Retail Store" />
 <Facility facilityId="F101" facilityTypeId="WAREHOUSE" facilityName="Central Warehouse" />
 
+<!-- ===================== FACILITY LOCATION ===================== -->
+<FacilityLocation facilityId="F100" aisleId="TL" areaId="TL" levelId="LL" locationSeqId="TLTLTLLL01" locationTypeEnumId="FLT_PICKLOC" positionId="01" sectionId="TL" />
+<FacilityLocation facilityId="F101" aisleId="TL" areaId="TL" levelId="LL" locationSeqId="TLTLTLLL01" locationTypeEnumId="FLT_PICKLOC" positionId="01" sectionId="TL" />
+
 <!-- ===================== FACILITY IDENTIFICATION ===================== -->
 <FacilityIdentification facilityId="F100" facilityIdenTypeId="WMS" idValue="STORE_MAIN" />
 
@@ -12,7 +16,8 @@
 <FacilityGroupMember facilityGroupId="FG100" facilityId="F100" sequenceNum="1" />
 
 <!-- ===================== FACILITY PARTY ===================== -->
-<FacilityParty facilityId="F101" partyId="10001" roleTypeId="WAREHOUSE_MANAGER" />
+<FacilityParty facilityId="F100" partyId="10001" roleTypeId="WAREHOUSE_MANAGER" />
 
 <!-- ===================== PRODUCT FACILITY ===================== -->
-<ProductFacility facilityId="F101" productId="10001" allowBrokering="N" inventoryItemId="O297535" computedLastInventoryCount="0"/>
+<ProductFacility facilityId="F100" productId="P300" allowBrokering="N" inventoryItemId="IT100" computedLastInventoryCount="100"/>
+<ProductFacility facilityId="F100" productId="P301" allowBrokering="N" inventoryItemId="IT100" computedLastInventoryCount="80"/>
