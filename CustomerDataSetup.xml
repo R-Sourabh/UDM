@@ -10,18 +10,28 @@
 <!-- ===================== CONTACT MECH ===================== -->
 <ContactMech contactMechId="20001" contactMechTypeId="EMAIL_ADDRESS" infoString="ram.tiwari@example.com"/>
 <ContactMech contactMechId="20002" contactMechTypeId="POSTAL_ADDRESS"/>
-<ContactMech contactMechId="20003" contactMechTypeId="TELECOM_NUMBER"/>
+<ContactMech contactMechId="20003" contactMechTypeId="POSTAL_ADDRESS"/>
+<ContactMech contactMechId="20004" contactMechTypeId="TELECOM_NUMBER"/>
+<ContactMech contactMechId="20005" contactMechTypeId="TELECOM_NUMBER"/>
+
 
 <!-- ===================== PARTY CONTACT MECH ===================== -->
 <PartyContactMech partyId="10001" contactMechId="20001" fromDate="2024-10-09 12:10:00"/>
 <PartyContactMech partyId="10001" contactMechId="20002" fromDate="2024-10-09 12:10:00"/>
 <PartyContactMech partyId="10001" contactMechId="20003" fromDate="2024-10-09 12:10:00"/>
+<PartyContactMech partyId="10001" contactMechId="20004" fromDate="2024-10-09 12:10:00"/>
+<PartyContactMech partyId="10001" contactMechId="20005" fromDate="2024-10-09 12:10:00"/>
 
 <!-- ===================== POSTAL ADDRESS & TELECOM NUMBER ===================== -->
 <PostalAddress contactMechId="20002" address1="123 Main Street" city="Austin" stateProvinceGeoId="TX" postalCode="78750" countryGeoId="USA"/>
-<TelecomNumber contactMechId="20003" countryCode="1" areaCode="512" contactNumber="9998888"/>
+<PostalAddress contactMechId="20003" address1="23 Street" city="Boston" stateProvinceGeoId="BS" postalCode="13420" countryGeoId="USA"/>
+<TelecomNumber contactMechId="20004" countryCode="1" areaCode="512" contactNumber="9998888"/>
+<TelecomNumber contactMechId="20005" countryCode="1" areaCode="112" contactNumber="2323423"/>
 
 <!-- ===================== PARTY CONTACT MECH PURPOSE ===================== -->
 <PartyContactMechPurpose partyId="10001" contactMechId="20001" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2024-10-09 12:10:00"/>
-<PartyContactMechPurpose partyId="10001" contactMechId="20002" contactMechPurposeTypeId="SHIPPING_LOCATION" fromDate="2024-10-09 12:10:00"/>
-<PartyContactMechPurpose partyId="10001" contactMechId="20003" contactMechPurposeTypeId="PHONE_SHIPPING" fromDate="2024-10-09 12:10:00"/>
+<PartyContactMechPurpose partyId="10001" contactMechId="20002" contactMechPurposeTypeId="BILLING_LOCATION" fromDate="2024-10-09 12:10:00"/>
+<PartyContactMechPurpose partyId="10001" contactMechId="20003" contactMechPurposeTypeId="SHIPPING_LOCATION" fromDate="2024-10-09 12:10:00"/>
+<PartyContactMechPurpose partyId="10001" contactMechId="20004" contactMechPurposeTypeId="PHONE_BILLING" fromDate="2024-10-09 12:10:00"/>
+<PartyContactMechPurpose partyId="10001" contactMechId="20005" contactMechPurposeTypeId="PHONE_SHIPPING" fromDate="2024-10-09 12:10:00"/>
+
