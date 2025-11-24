@@ -1,0 +1,45 @@
+                                                                             <!-- ===================== ORDER CREATED ===================== -->
+
+<!-- ORDER HEADER -->
+<OrderHeader orderId="10" orderTypeId="SALES_ORDER" statusId="ORDER_CREATED" createdBy="system" orderDate="2024-10-09 12:10:00" entryDate="2024-10-09 12:10:00" salesChannelEnumId="WEB_SALES_CHANNEL" currencyUom="USD"/>
+
+<!-- ORDER HEADER -->
+<OrderType description="Sales Order" hasTable="N" orderTypeId="SALES_ORDER"/>
+
+<!-- ORDER STATUS (ORDER LEVEL) -->
+<OrderStatus orderStatusId="10_CREATED" orderId="10" statusId="ORDER_CREATED" statusUserLogin="system"/>
+
+<!-- SHIP GROUP -->
+<OrderItemShipGroup orderId="10" shipGroupSeqId="1" shipmentMethodTypeId="STANDARD" carrierPartyId="FEDEX"/>
+<OrderItemShipGroup orderId="10" shipGroupSeqId="2" shipmentMethodTypeId="STANDARD" carrierPartyId="FEDEX"/>
+
+<!-- ORDER ITEMS & ORDER STATUS FOR EACH ITEM -->
+<OrderItem orderId="10" orderItemSeqId="1" productId="P301" statusId="ITEM_CREATED" facilityID="_NA_" quantity="1"/>
+<OrderItem orderId="10" orderItemSeqId="2" productId="P302" statusId="ITEM_CREATED" facilityID="_NA_" quantity="1"/>
+<OrderStatus orderStatusId="10_CREATED" orderId="10" orderItemSeqId="1" statusId="ITEM_CREATED" facilityID="_NA_" />
+<OrderStatus orderStatusId="10_CREATED" orderId="10" orderItemSeqId="2" statusId="ITEM_CREATED" facilityID="_NA_" />
+
+<!-- ORDER PAYMENT PREFERENCE-->
+<OrderPaymentPreference orderPaymentPreferenceId="OPP1" orderId="10" paymentMethodTypeId="EXT_SHOP_OTHR_GTWAY" statusId="PAYMENT_AUTHORIZED" />
+
+<!-- ORDER ROLES -->
+<OrderRole orderId="10" roleTypeId="PLACING_CUSTOMER" partyId="10001" fromDate="2024-10-09 12:10:00"/>
+<OrderRole orderId="10" roleTypeId="BILL_TO_CUSTOMER" partyId="10001" fromDate="2024-10-09 12:10:00"/>
+<OrderRole orderId="10" roleTypeId="SHIP_TO_CUSTOMER" partyId="10001" fromDate="2024-10-09 12:10:00"/>
+
+<!-- ORDER CONTACT MECHS -->
+<OrderContactMech orderId="10" contactMechId="20001" contactMechPurposeTypeId="PRIMARY_EMAIL"/>
+<OrderContactMech orderId="10" contactMechId="20002" contactMechPurposeTypeId="BILLING_LOCATION"/>
+<OrderContactMech orderId="10" contactMechId="20003" contactMechPurposeTypeId="SHIPPING_LOCATION"/>
+<OrderContactMech orderId="10" contactMechId="20004" contactMechPurposeTypeId="PHONE_BILLING"/>
+<OrderContactMech orderId="10" contactMechId="20005" contactMechPurposeTypeId="PHONE_SHIPPING"/>
+
+<!-- ORDER ADJUSTMENT -->
+<OrderAdjustment amount="1.080" comments="State Tax" createdByUserLogin="system" orderAdjustmentId="OA01" orderAdjustmentTypeId="SALES_TAX" orderId="10" orderItemSeqId="1" shipGroupSeqId="_NA_" sourcePercentage="0.047000"/>
+<OrderAdjustment amount="1.080" comments="State Tax" createdByUserLogin="system" orderAdjustmentId="OA02" orderAdjustmentTypeId="SALES_TAX" orderId="10" orderItemSeqId="2" shipGroupSeqId="_NA_" sourcePercentage="0.047000"/>
+
+<!-- ORDER ATTRIBUTE -->
+<OrderAttribute attrDescription="Shopify User Id" attrName="shopify_user_id" attrValue="92566585508" orderId="10"/>
+
+
+                                                                             <!-- ===================== ORDER APPROVED ===================== -->
