@@ -1,0 +1,8 @@
+
+<!--Inventory Items-->
+<InventoryItem accountingQuantityTotal="100.000000" availableToPromiseTotal="100.000000" datetimeReceived="2025-11-12 12:05:00.0" facilityId="F100" inventoryItemId="II101" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="P301" quantityOnHandTotal="100.000000" unitCost="33.000000"/>
+<InventoryItem accountingQuantityTotal="100.000000" availableToPromiseTotal="100.000000" datetimeReceived="2025-11-12 12:05:00.0" facilityId="F100" inventoryItemId="II102" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="P302" quantityOnHandTotal="100.000000" unitCost="120.000000"/>
+
+<!--Inventory Item Detail-->
+<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-26 12:05:00.0" inventoryItemDetailSeqId="IID1" inventoryItemId="II101" lastAvailableToPromise="100.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-27 12:05:00.0" orderId="10" orderItemSeqId="1" quantityOnHandDiff="0.000000" shipGroupSeqId="1" />
+<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-27 12:05:00.0" inventoryItemDetailSeqId="IIDD2" inventoryItemId="II102" lastAvailableToPromise="1000.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-28 12:05:00.0" orderId="10" orderItemSeqId="2" quantityOnHandDiff="0.000000" shipGroupSeqId="2" />
