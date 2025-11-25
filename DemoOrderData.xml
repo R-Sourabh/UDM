@@ -7,7 +7,7 @@
 <OrderType description="Sales Order" hasTable="N" orderTypeId="SALES_ORDER"/>
 
 <!-- ORDER STATUS (ORDER LEVEL) -->
-<OrderStatus orderStatusId="10_CREATED" orderId="10" statusId="ORDER_CREATED" statusUserLogin="system"/>
+<OrderStatus orderStatusId="OS_CREATED" orderId="10" statusId="ORDER_CREATED" statusUserLogin="system"/>
 
 <!-- SHIP GROUP -->
 <OrderItemShipGroup orderId="10" shipGroupSeqId="1" shipmentMethodTypeId="STANDARD" carrierPartyId="FEDEX"/>
@@ -16,8 +16,8 @@
 <!-- ORDER ITEMS & ORDER STATUS FOR EACH ITEM -->
 <OrderItem orderId="10" orderItemSeqId="1" productId="P301" statusId="ITEM_CREATED" facilityID="_NA_" quantity="1"/>
 <OrderItem orderId="10" orderItemSeqId="2" productId="P302" statusId="ITEM_CREATED" facilityID="_NA_" quantity="1"/>
-<OrderStatus orderStatusId="10_CREATED" orderId="10" orderItemSeqId="1" statusId="ITEM_CREATED" facilityID="_NA_" />
-<OrderStatus orderStatusId="10_CREATED" orderId="10" orderItemSeqId="2" statusId="ITEM_CREATED" facilityID="_NA_" />
+<OrderStatus orderStatusId="OSI_CREATED" orderId="10" orderItemSeqId="1" statusId="ITEM_CREATED" />
+<OrderStatus orderStatusId="OSI_CREATED" orderId="10" orderItemSeqId="2" statusId="ITEM_CREATED" />
 
 <!-- ORDER PAYMENT PREFERENCE-->
 <OrderPaymentPreference orderPaymentPreferenceId="OPP1" orderId="10" paymentMethodTypeId="EXT_SHOP_OTHR_GTWAY" statusId="PAYMENT_AUTHORIZED" />
@@ -43,3 +43,54 @@
 
 
                                                                              <!-- ===================== ORDER APPROVED ===================== -->
+
+<OrderHeader orderId="10" orderTypeId="SALES_ORDER" statusId="ORDER_APPROVED" createdBy="system" orderDate="2024-10-09 12:10:00" entryDate="2024-10-09 12:10:00" salesChannelEnumId="WEB_SALES_CHANNEL" currencyUom="USD"/>
+
+<OrderStatus orderStatusId="OS_APPROVED" orderId="10" statusId="ORDER_APPROVED" statusUserLogin="system"/>
+
+<OrderItemShipGroup orderId="10" shipGroupSeqId="1" shipmentMethodTypeId="STANDARD" carrierPartyId="FEDEX" facilityId="F100"/>
+<OrderItemShipGroup orderId="10" shipGroupSeqId="2" shipmentMethodTypeId="STANDARD" carrierPartyId="FEDEX" facilityId="F100"/>
+
+<OrderItem orderId="10" orderItemSeqId="1" productId="P301" statusId="ITEM_APPROVED" facilityID="_NA_" quantity="1"/>
+<OrderItem orderId="10" orderItemSeqId="2" productId="P302" statusId="ITEM_APPROVED" facilityID="_NA_" quantity="1"/>
+<OrderStatus orderStatusId="OSI_APPROVED" orderId="10" orderItemSeqId="1" statusId="ITEM_APPROVED" />
+<OrderStatus orderStatusId="OSI_APPROVED" orderId="10" orderItemSeqId="2" statusId="ITEM_APPROVED" />
+
+<!--Inventory Items-->
+<InventoryItem accountingQuantityTotal="100.000000" availableToPromiseTotal="100.000000" datetimeReceived="2025-11-12 12:05:00.0" facilityId="F100" inventoryItemId="II101" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="P301" quantityOnHandTotal="100.000000" unitCost="33.000000"/>
+<InventoryItem accountingQuantityTotal="100.000000" availableToPromiseTotal="100.000000" datetimeReceived="2025-11-12 12:05:00.0" facilityId="F100" inventoryItemId="II102" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="P302" quantityOnHandTotal="100.000000" unitCost="120.000000"/>
+
+<ProductFacility computedLastInventoryCount="99.000000" facilityId="F100" inventoryItemId="II101" minimumStock="5" allowBrokering="N" lastInventoryCount="100.000000" productId="P301"/>
+<ProductFacility computedLastInventoryCount="99.000000" facilityId="F100" inventoryItemId="II102" minimumStock="5" allowBrokering="N" lastInventoryCount="100.000000" productId="P302"/>
+
+<!--Inventory Item Detail-->
+<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-26 12:05:00.0" inventoryItemDetailSeqId="IID1" inventoryItemId="II101" lastAvailableToPromise="100.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-27 12:05:00.0" orderId="10" orderItemSeqId="1" quantityOnHandDiff="0.000000" shipGroupSeqId="1" />
+<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-27 12:05:00.0" inventoryItemDetailSeqId="IIDD2" inventoryItemId="II102" lastAvailableToPromise="1000.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-28 12:05:00.0" orderId="10" orderItemSeqId="2" quantityOnHandDiff="0.000000" shipGroupSeqId="2" />
+
+<PhysicalInventory partyId="HOTWAX_USER" physicalInventoryDate="2024-06-14 01:06:27.3" physicalInventoryId="PI101"/>
+<PhysicalInventory partyId="HOTWAX_USER" physicalInventoryDate="2024-06-14 01:06:27.3" physicalInventoryId="PI102"/>
+
+<InventoryItemVariance availableToPromiseVar="-1.000000" changeByUserLoginId="ram.tiwari" comments="VarianceAPI:Variance log for POS order : 10" inventoryItemId="II101" physicalInventoryId="PI101" reasonEnumId="POS_SALE"/>
+<InventoryItemVariance availableToPromiseVar="-1.000000" changeByUserLoginId="ram.tiwari" comments="VarianceAPI:Variance log for POS order : 10" inventoryItemId="II102" physicalInventoryId="PI102" reasonEnumId="POS_SALE"/>
+
+<OrderItemShipGrpInvRes inventoryItemId="II101" orderId="10" orderItemSeqId="1" quantity="1.000000" reserveOrderEnumId="INVRO_FIFO_REC" reservedDatetime="2025-11-12 12:05:00.0" shipGroupSeqId="1"/> 
+<OrderItemShipGrpInvRes inventoryItemId="II102" orderId="10" orderItemSeqId="2" quantity="1.000000" reserveOrderEnumId="INVRO_FIFO_REC" reservedDatetime="2025-11-12 12:05:00.0" shipGroupSeqId="2"/>
+
+<Picklist createdByUserLogin="ram.tiwari" facilityId="F100" picklistDate="2024-12-24 08:13:08.371" picklistId="PL101" shipmentMethodTypeId="STANDARD" statusId="PICKLIST_INPUT"/>
+<Picklist createdByUserLogin="ram.tiwari" facilityId="F100" picklistDate="2024-12-24 08:13:08.371" picklistId="PL101" shipmentMethodTypeId="STANDARD" statusId="PICKLIST_ASSIGNED"/>
+<Picklist createdByUserLogin="ram.tiwari" facilityId="F100" picklistDate="2024-12-24 08:13:08.371" picklistId="PL101" shipmentMethodTypeId="STANDARD" statusId="PICKLIST_PRINTED"/>
+<Picklist createdByUserLogin="ram.tiwari" facilityId="F100" picklistDate="2024-12-24 08:13:08.371" picklistId="PL101" shipmentMethodTypeId="STANDARD" statusId="PICKLIST_PICKED"/>
+
+<PicklistStatusHistory createdByUserLogin="ram.tiwari" createdDate="2024-12-24 08:13:08.41" picklistId="PL101" statusId="PICKLIST_INPUT" statusIdTo="PICKLIST_ASSIGNED"/>
+<PicklistStatusHistory createdByUserLogin="ram.tiwari" createdDate="2024-12-24 08:13:08.41" picklistId="PL101" statusId="PICKLIST_ASSIGNED" statusIdTo="PICKLIST_PRINTED"/>
+<PicklistStatusHistory createdByUserLogin="ram.tiwari" createdDate="2024-12-24 08:13:08.41" picklistId="PL101" statusId="PICKLIST_PRINTED" statusIdTo="PICKLIST_PICKED"/>
+
+<PicklistBin binLocationNumber="1" picklistBinId="PLB101" picklistId="PL101" primaryOrderId="10" primaryShipGroupSeqId="1"/>
+<PicklistBin binLocationNumber="1" picklistBinId="PLB101" picklistId="PL101" primaryOrderId="10" primaryShipGroupSeqId="2"/>
+
+<PicklistItem inventoryItemId="II101" itemStatusId="PICKITEM_PENDING" orderId="10" orderItemSeqId="1" picked="1.000000" picklistBinId="PLB101" quantity="1.000000" shipGroupSeqId="1"/>
+<PicklistItem inventoryItemId="II102" itemStatusId="PICKITEM_PENDING" orderId="10" orderItemSeqId="2" picked="1.000000" picklistBinId="PLB101" quantity="1.000000" shipGroupSeqId="2"/>
+
+<PicklistItem inventoryItemId="II101" itemStatusId="PICKITEM_COMPLETED" orderId="10" orderItemSeqId="1" picked="1.000000" picklistBinId="PLB101" quantity="1.000000" shipGroupSeqId="1"/>
+<PicklistItem inventoryItemId="II102" itemStatusId="PICKITEM_COMPLETED" orderId="10" orderItemSeqId="2" picked="1.000000" picklistBinId="PLB101" quantity="1.000000" shipGroupSeqId="2"/>
+
