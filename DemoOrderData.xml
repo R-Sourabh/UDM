@@ -14,8 +14,8 @@
 <OrderItemShipGroup orderId="10" shipGroupSeqId="1" shipmentMethodTypeId="STANDARD" carrierPartyId="FEDEX"/>
 
 <!-- ORDER ITEMS & ORDER STATUS FOR EACH ITEM -->
-<OrderItem orderId="10" orderItemSeqId="1" productId="P301" statusId="ITEM_CREATED" facilityID="_NA_" quantity="1"/>
-<OrderItem orderId="10" orderItemSeqId="2" productId="P302" statusId="ITEM_CREATED" facilityID="_NA_" quantity="1"/>
+<OrderItem orderId="10" orderItemSeqId="1" shipGroupSeqId="1" productId="P301" statusId="ITEM_CREATED" facilityID="_NA_" quantity="1"/>
+<OrderItem orderId="10" orderItemSeqId="2" shipGroupSeqId="1" productId="P302" statusId="ITEM_CREATED" facilityID="_NA_" quantity="1"/>
 <OrderStatus orderStatusId="OSI_CREATED" orderId="10" orderItemSeqId="1" statusId="ITEM_CREATED" />
 <OrderStatus orderStatusId="OSI_CREATED" orderId="10" orderItemSeqId="2" statusId="ITEM_CREATED" />
 
@@ -65,7 +65,7 @@
 
 <!--Inventory Item Detail-->
 <InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-26 12:05:00.0" inventoryItemDetailSeqId="IID1" inventoryItemId="II101" lastAvailableToPromise="100.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-27 12:05:00.0" orderId="10" orderItemSeqId="1" quantityOnHandDiff="0.000000" shipGroupSeqId="1" />
-<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-27 12:05:00.0" inventoryItemDetailSeqId="IIDD2" inventoryItemId="II102" lastAvailableToPromise="1000.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-28 12:05:00.0" orderId="10" orderItemSeqId="2" quantityOnHandDiff="0.000000" shipGroupSeqId="2" />
+<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-27 12:05:00.0" inventoryItemDetailSeqId="IID2" inventoryItemId="II102" lastAvailableToPromise="1000.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-28 12:05:00.0" orderId="10" orderItemSeqId="2" quantityOnHandDiff="0.000000" shipGroupSeqId="2" />
 
 <PhysicalInventory partyId="HOTWAX_USER" physicalInventoryDate="2024-06-14 01:06:27.3" physicalInventoryId="PI101"/>
 <PhysicalInventory partyId="HOTWAX_USER" physicalInventoryDate="2024-06-14 01:06:27.3" physicalInventoryId="PI102"/>
@@ -119,3 +119,26 @@
 <ShipmentRouteSegment actualCost="123.00" billingWeight="0.661400" billingWeightUomId="WT_lb" carrierPartyId="TEST" carrierServiceStatusId="SHRSCS_ACCEPTED" destContactMechId="20003" isTrackingRequired="Y" originContactMechId="20002" originFacilityId="F100" shipmentId="S101" shipmentMethodTypeId="STANDARD" shipmentRouteSegmentId="SRS101" trackingIdNumber="1234567890" updatedByUserLoginId="pankaj.singh"/>
 
 <ShipmentPackageRouteSeg labelImageUrl="https://iamge_[B@4c76fcbc.png" currencyUomId="USD" labelImage="[B@4c76fcbc" shipmentId="S101" shipmentPackageSeqId="00001" shipmentRouteSegmentId="SRS101" trackingCode="1234567890"/>
+
+<!-- Shipment completed -->
+<Shipment createdByUserLogin="pankaj.singh" destinationContactMechId="20003" estimatedShipCost="0.00" originContactMechId="20002" originFacilityId="F100" partyIdFrom="COMPANY" partyIdTo="10002" primaryOrderId="10" primaryShipGroupSeqId="2" shipmentId="S101" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_PACKED"/>
+<Shipment createdByUserLogin="pankaj.singh" destinationContactMechId="20003" estimatedShipCost="0.00" originContactMechId="20002" originFacilityId="F100" partyIdFrom="COMPANY" partyIdTo="10002" primaryOrderId="10" primaryShipGroupSeqId="2" shipmentId="S101" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_COMPLETED"/>
+
+<!-- Inventory level changes after shipment shipped -->
+<ItemIssuance inventoryItemId="II101" issuedDateTime="2025-11-22 12:09:00.00" itemIssuanceId="III101" orderId="10" orderItemSeqId="1" quantity="1.000000" shipGroupSeqId="2" shipmentId="S101" shipmentItemSeqId="1"/>
+<ItemIssuance inventoryItemId="II102" issuedDateTime="2025-11-22 12:09:00.00" itemIssuanceId="III102" orderId="10" orderItemSeqId="2" quantity="1.000000" shipGroupSeqId="2" shipmentId="S101" shipmentItemSeqId="2"/>
+
+<InventoryItemDetail availableToPromiseDiff="0.000000" effectiveDate="2025-11-22 12:09:00.00" inventoryItemDetailSeqId="IID1" inventoryItemId="II101" itemIssuanceId="III101" lastAvailableToPromise="99.000000" quantityOnHandDiff="-1.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-22 12:09:00.00" orderId="10" shipmentId="F10030" orderItemSeqId="1" shipGroupSeqId="1" />
+<InventoryItemDetail availableToPromiseDiff="0.000000" effectiveDate="2025-11-22 12:09:00.00" inventoryItemDetailSeqId="IID2" inventoryItemId="II102" itemIssuanceId="III102" lastAvailableToPromise="99.000000" quantityOnHandDiff="-1.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-22 12:09:00.00" orderId="10" shipmentId="F10030" orderItemSeqId="2" shipGroupSeqId="2" />
+
+<InventoryItem accountingQuantityTotal="99.000000" availableToPromiseTotal="99.000000" datetimeReceived="2025-11-22 12:09:00.00" facilityId="F100" inventoryItemId="II101" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="P301" quantityOnHandTotal="99.000000" unitCost="33.000000"/>
+<InventoryItem accountingQuantityTotal="99.000000" availableToPromiseTotal="99.000000" datetimeReceived="2025-11-22 12:09:00.00" facilityId="F100" inventoryItemId="II102" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="P302" quantityOnHandTotal="99.000000" unitCost="120.000000"/>
+
+<!-- Order related changes after shipment -->
+<OrderItem orderId="10" orderItemSeqId="1" shipGroupSeqId="2" productId="P301" statusId="ITEM_COMPLETED" facilityID="_NA_" quantity="1"/>
+<OrderItem orderId="10" orderItemSeqId="2" shipGroupSeqId="2" productId="P302" statusId="ITEM_COMPLETED" facilityID="_NA_" quantity="1"/>
+<OrderStatus orderStatusId="OSI_CREATED" orderId="10" orderItemSeqId="1" statusId="ITEM_COMPLETED" />
+<OrderStatus orderStatusId="OSI_CREATED" orderId="10" orderItemSeqId="2" statusId="ITEM_COMPLETED" />
+
+<OrderHeader orderId="10" orderTypeId="SALES_ORDER" statusId="ORDER_COMPLETED" createdBy="system" orderDate="2024-10-09 12:10:00" entryDate="2024-10-09 12:10:00" salesChannelEnumId="WEB_SALES_CHANNEL" currencyUom="USD"/>
+<OrderStatus orderStatusId="OS_CREATED" orderId="10" statusId="ORDER_COMPLETED" statusUserLogin="system"/>
