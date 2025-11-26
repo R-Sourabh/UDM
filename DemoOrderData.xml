@@ -124,6 +124,9 @@
 <Shipment createdByUserLogin="pankaj.singh" destinationContactMechId="20003" estimatedShipCost="0.00" originContactMechId="20002" originFacilityId="F100" partyIdFrom="COMPANY" partyIdTo="10002" primaryOrderId="10" primaryShipGroupSeqId="2" shipmentId="S101" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_PACKED"/>
 <Shipment createdByUserLogin="pankaj.singh" destinationContactMechId="20003" estimatedShipCost="0.00" originContactMechId="20002" originFacilityId="F100" partyIdFrom="COMPANY" partyIdTo="10002" primaryOrderId="10" primaryShipGroupSeqId="2" shipmentId="S101" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_COMPLETED"/>
 
+
+                                                                             <!-- ===================== ORDER COMPLETED ===================== -->
+
 <!-- Inventory level changes after shipment shipped -->
 <ItemIssuance inventoryItemId="II101" issuedDateTime="2025-11-22 12:09:00.00" itemIssuanceId="III101" orderId="10" orderItemSeqId="1" quantity="1.000000" shipGroupSeqId="2" shipmentId="S101" shipmentItemSeqId="1"/>
 <ItemIssuance inventoryItemId="II102" issuedDateTime="2025-11-22 12:09:00.00" itemIssuanceId="III102" orderId="10" orderItemSeqId="2" quantity="1.000000" shipGroupSeqId="2" shipmentId="S101" shipmentItemSeqId="2"/>
